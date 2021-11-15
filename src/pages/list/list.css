@@ -1,0 +1,18 @@
+.inp {
+    height: 30px;
+    width: 350px;
+    margin: 10px;
+}
+
+.list {
+    text-align: left;
+}
+
+.clear {
+    margin: 10px;
+}
+
+.point {
+    display: flex;
+    margin: 10px;
+}

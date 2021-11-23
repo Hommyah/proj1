@@ -8,11 +8,15 @@
     text-align: left;
 }
 
-.clear {
+.btn {
     margin: 10px;
 }
 
 .point {
     display: flex;
     margin: 10px;
+}
+
+.point:checked {
+    text-decoration: line-through;
 }

@@ -5,8 +5,13 @@ type Props = {
 }
 
 const BtnByClear: React.FC<Props> = ({setClean}) => {
+
+    const x = () => {
+
+    }
+
     return (
-        <button className='clear'>Очистить список</button>
+        <button className='btn'>Очистить список</button>
     )
 }
 

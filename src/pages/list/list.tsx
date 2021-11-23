@@ -1,28 +1,34 @@
 import * as React from "react";
 import './list.css'
-import Input from "./components/input";
-import BtnByPush from "./components/BtnByPush";
 import Point from "./components/point";
-import BtnByClear from "./components/btnByClear";
 
 const List = () => {
 
     const [value, setValue] = React.useState('')
-    const [point, setPnt] = React.useState('')
-    const [push, setPsh] = React.useState('')
-    const [clear, setClear] = React.useState('')
+    const [list, setList] = React.useState<Array<string>>([])
+
+    const Inp = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setValue(e.target.value)
+    }
+
+    const Push = () => {
+        if (value === '') {
+            return
+        }
+        let old = [...list]
+        old.push(value)
+        setList(old)
+        setValue('')
+    }
 
     return(
         <div className="list">
-            <Input setVal={(v:string)=>setValue(v)}/>
-            <BtnByPush setPush={(p:string
-            )=>setPsh(p)}/>
-
-            <li>
-                <p><Point text={push} setPoint={(pnt:string)=>setPnt(pnt)}/></p>
-            </li>
-
-            <BtnByClear setClean={setClear}/>
+            <input className='inp' value={value} onChange={Inp} placeholder='Введите что-нибудь'/>
+            <div className='btn'>
+                <button onClick={Push}>Добавить пункт</button>
+                <div>{list.map((l, i)=>(<Point key={i} text={l}/>))}</div>
+            </div>
+            {/*<BtnByClear setClean={setClear}/>*/}
         </div>
     )
 }

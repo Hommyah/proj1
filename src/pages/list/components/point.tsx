@@ -2,16 +2,17 @@ import React from "react";
 
 type Props = {
     text: string;
-    setPoint: (pnt: string)=>void;
+    setPoint?: (pnt: string)=>void;
 }
 
 const Point: React.FC<Props> = ({text,setPoint}) => {
+    const [clicked, setClicked] = React.useState(false);
 
-    setPoint(text)
+    const ChangeClicked = React.useCallback(()=>{setClicked(!clicked)}, [clicked])
 
     return (
-        <div className='point'>
-            <input type={"checkbox"}/>
+        <div className='point' style={ clicked? {textDecoration: "line-through"}:undefined}>
+            <input type={"checkbox"} onChange={ChangeClicked}/>
             <div>{text}</div>
         </div>
     )

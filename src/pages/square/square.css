@@ -1,0 +1,24 @@
+.squares {
+    display: flex;
+}
+
+.blue {
+    background: #135bc7;
+    margin-right: 10px;
+    height: 200px;
+    width: 200px;
+}
+
+.green {
+    background: #3db71b;
+    margin-right: 10px;
+    height: 200px;
+    width: 200px;
+}
+
+.red {
+    background: #c21010;
+    margin-right: 10px;
+    height: 200px;
+    width: 200px;
+}

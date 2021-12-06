@@ -28,7 +28,6 @@ const List = () => {
                 <button onClick={Push}>Добавить пункт</button>
                 <div>{list.map((l, i)=>(<Point key={i} text={l}/>))}</div>
             </div>
-            {/*<BtnByClear setClean={setClear}/>*/}
         </div>
     )
 }

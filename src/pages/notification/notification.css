@@ -1,0 +1,21 @@
+.error {
+    background: #c41d1d;
+    margin: auto;
+    text-align: center;
+    height: 100px;
+    width: 150px;
+    color: white;
+}
+
+.success {
+    background: #2e9f2e;
+    text-align: center;
+    height: 100px;
+    width: 150px;
+    margin: auto;
+    color: white;
+}
+
+.btn {
+    margin: 15px;
+}

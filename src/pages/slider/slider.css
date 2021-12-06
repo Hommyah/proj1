@@ -1,0 +1,48 @@
+.slider {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+
+}
+
+.image {
+    width: 1000px;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.fa-arrow-circle-right {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    font-size: 3rem;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa-arrow-circle-left {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    font-size: 3rem;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slide {
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+.slideActive {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+}

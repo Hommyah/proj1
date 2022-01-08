@@ -7,16 +7,18 @@ import Notification from "./pages/notification";
 import Square from "./pages/square";
 import Slider from "./pages/slider";
 import {SliderData} from "./pages/slider/sliderData";
+import Header from "./header";
 
 function App() {
   return (
       <div className='App'>
           <BrowserRouter>
-              <Route path='/slider' component={SliderProps}/>
-              <Route path='/calculator' component={Calculator}/>
-              <Route path='/notice' component={Notification}/>
-              <Route path='/list' component={List}/>
-              <Route path='/square' component={Square}/>
+              <Header/>
+              <Route exact path='/slider' component={SliderProps}/>
+              <Route exact path='/calculator' component={Calculator}/>
+              <Route exact path='/notice' component={Notification}/>
+              <Route exact path='/list' component={List}/>
+              <Route exact path='/square' component={Square}/>
           </BrowserRouter>
       </div>
 

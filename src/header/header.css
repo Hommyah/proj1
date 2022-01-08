@@ -1,0 +1,11 @@
+.header {
+    background: #7bc788;
+    margin: 10px;
+    height: 30px;
+    width: 520px;
+    text-align: center;
+}
+
+.header__item {
+    margin-right: 20px;
+}
